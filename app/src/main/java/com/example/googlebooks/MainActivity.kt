@@ -70,7 +70,7 @@ fun BooksScreen(
         )
         Spacer(Modifier.height(12.dp))
 
-// Input teks + tombol trigger pencarian
+        // Input teks + tombol trigger pencarian
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -101,7 +101,7 @@ fun BooksScreen(
             )
         }
 
-// Daftar hasil pencarian
+        // Daftar hasil pencarian
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -109,9 +109,10 @@ fun BooksScreen(
             items(results, key = { it.id }) { item ->
                 BookRow(
                     item = item,
-
-                    onClick = { /* diisi pada Codelab 5 */ }
-
+                    onClick = {
+                        // Buka halaman detail dan kirim data buku via Intent
+                        context.startActivity(DetailActivity.newIntent(context, item))
+                    }
                 )
             }
         }
