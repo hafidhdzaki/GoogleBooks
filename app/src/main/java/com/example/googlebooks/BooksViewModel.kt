@@ -22,7 +22,7 @@ class BooksViewModel : ViewModel() {
     val error: StateFlow<String?> = _error.asStateFlow()
 
     companion object{
-        private const val API_KEY = "Aiza..."
+        private const val API_KEY = "AIzaSyCMm88XMIFCbl0WC3b4uUEYu7MhM33rNpY"
         private const val MAX_RESULTS = 20
     }
 
